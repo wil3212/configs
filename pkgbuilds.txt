@@ -1,0 +1,3 @@
+glpaper-hg
+glpaper-hg-debug
+google-chrome
