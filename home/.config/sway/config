@@ -24,8 +24,9 @@ font pango:JetBrainsMono NFM 12
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg "/home/filo/Images/WhatsApp Image 2026-02-22 at 18.30.15.jpeg" fill
 #
+output * bg "/home/filo/Images/ScreenShots/2026-04-24_02-04-12.png" fill
+#output * bg "/home/filo/Images/WhatsApp Image 2026-02-22 at 18.30.15.jpeg" fill
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
@@ -62,6 +63,14 @@ output * bg "/home/filo/Images/WhatsApp Image 2026-02-22 at 18.30.15.jpeg" fill
 #
 # You can also configure each device individually.
 # Read `man 5 sway-input` for more information about this section.
+# Tempo em milissegundos antes de começar a repetir (padrão é 500)
+ # Quantidade de repetições por segundo (padrão é 25)
+    input * {
+        repeat_delay 500  
+        repeat_rate 40  
+    }    
+
+
 
 ### Key bindings
 #
@@ -248,16 +257,16 @@ gaps inner 8
 gaps outer 1
 
 bindsym $mod+Shift+a move workspace to output left
-
 bindsym $mod+Shift+s move workspace to output right  
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 
 for_window [class="^.*"] opacity set 0.9
-#for_window [app_id="^.*"] opacity set 0.9
+for_window [app_id="^.*"] opacity set 0.9
 # Binds the Print Screen key to launch the Xfce Screenshot GUI tool.
 #bindsym Print exec --no-startup-id flameshot gui
 
- 
+seat seat0 xcursor_theme "Banana-Red" 24
+
 
 include /etc/sway/config.d/*
