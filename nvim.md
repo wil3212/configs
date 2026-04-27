@@ -22,3 +22,6 @@ export VISUAL="nvim"
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 `
+
+* **sudo write:**
+    `:w !sudo tee % > /dev/null`
